@@ -1,0 +1,67 @@
+.education-section {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .education-section ul {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  } 
+  .education-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .education-card {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .education-card::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #333;
+  }
+  
+  .education-info {
+    text-align: left;
+  }
+  
+  .institute-name {
+    font-size: 18px;
+    margin: 0;
+  }
+  
+  .course-name {
+    margin-top: 5px;
+  }
+  
+  .duration,
+  .percentage,
+  .gpa {
+    margin-top: 5px;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .education-card {
+      padding-left: 15px;
+    }
+    
+    .education-card::before {
+      top: 6px;
+      left: -6px;
+      width: 10px;
+      height: 10px;
+    }
+  }
+  
