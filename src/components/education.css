@@ -1,8 +1,8 @@
 .education-section {
-    text-align: center;
+    /* text-align: center; */
     display: flex;
     flex-direction: column;
-    align-items: center;
+    padding-left: 20px;
   }
   .education-section ul {
     display: flex;
@@ -18,7 +18,10 @@
   .education-card {
     position: relative;
     padding-left: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 0.5px;
+    border: 5px solid grey;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
   
   .education-card::before {

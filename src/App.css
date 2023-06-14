@@ -7,8 +7,9 @@
     justify-content: center;
 }
 h1{
-    text-align: center;
-    font-size: 50px;
+    font-size: 25px;
     font-family: 'Roboto', sans-serif;
-    color: #333;
+    color: white;
+    background-color: rgb(32, 161, 241);
+    padding: 4px 8px;
 }
