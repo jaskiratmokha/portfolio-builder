@@ -1,38 +1,35 @@
-import Project from './components/project';
-import Article from './components/article';
-import Education from './components/education';
-import About from './components/About';
+import React from 'react';
+import { Helmet } from 'react-helmet';
 import './App.css';
-import Projects from './User/userprojects'; 
-import articles from './User/userarticles';
-import educations from './User/usereducation';
+import ResumeState from './Context/ResumeState';
+import { Routes, Route } from 'react-router-dom';
+import Home from './Pages/Home/Home';
+import Navbar from './Components/Navbar/Navbar';
+import About from './Pages/About/About';
+
 function App() {
   return (
-    <>
-    <h1>BRIEF SUMMARY</h1>
-    <About Aboutname="Jaskirat" Aboutbio="lorem ipsum lorem ipsum lorem ipsum lorem ipsum" Aboutemail="jsmokha33@gmail.com"></About>
-    <h1>EDUCATION</h1>
-    <div className='Education'>
-      {educations.map((education)=>{
-        return <Education {...education} />
-      }
-      )}
-    </div>
-    <h1>PROJECTS</h1>
-    <div className='Projects'>
-      {Projects.map((project)=>{
-        return <Project {...project} />
-      }
-      )}
-    </div>
-    <h1>ARTICLES</h1>
-    <div className='Articles'>
-    {articles.map((article)=>{
-      return <Article {...article} />
-    }
-    )}
-    </div>
-    </>
+    <ResumeState>
+      <div className="App">
+        <Helmet>
+          <title>Resume Builder - Create Professional Resumes Online</title>
+          <meta name="description" content="Build and customize professional resumes online with Resume Builder. Choose from a variety of templates and create your perfect resume easily." />
+          <meta name="keywords" content="resume builder, professional resumes, online resumes, resume templates" />
+          <meta name="author" content="Jaskirat Singh" />
+          <meta property="og:title" content="Resume Builder - Create Professional Resumes Online" />
+          <meta property="og:description" content="Build and customize professional resumes online with Resume Builder. Choose from a variety of templates and create your perfect resume easily." />
+          <meta property="og:image" content="https://avatars.githubusercontent.com/u/75515362?v=4" />
+          <meta property="og:url" content="https://quick-resume.netlify.app/" />
+          <meta property="og:type" content="website" />
+        </Helmet>
+        <Navbar />
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/home" element={<Home />} />
+          <Route exact path="/about" element={<About />} />
+        </Routes>
+      </div>
+    </ResumeState>
   );
 }
 
